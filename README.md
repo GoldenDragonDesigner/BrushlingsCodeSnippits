@@ -1,4 +1,5 @@
 # BrushlingsCodeSnippits
+This repo is a sampling of the scrtipts that I worked on for Brushlings Pale Moon.
 
 I imported my capstone BaseEnemy.cs script to Brushlings Pale Moon with a key difference I did not have to make the basic enemies utilize nav Points they were free to roam and BaseEnemyScript.cs was born. FireBoss.cs is an example of using inheritance for the method functionalities that I needed in order to make the FireBoss.cs work.
 
