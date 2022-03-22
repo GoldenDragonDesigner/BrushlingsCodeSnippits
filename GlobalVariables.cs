@@ -1,5 +1,3 @@
-﻿
-
 public static class GlobalVariables
 {
     #region Player
@@ -67,15 +65,6 @@ public static class GlobalVariables
 
     #region RegularEnemies
 
-    //public static BasicEnemy BASICENEMY;
-    //public static FireEnemy FIREENEMY;
-    //public static MoltenEnemy MOLTENENEMY;
-    //public static WaterEnemy WATERENEMY;
-    //public static GroundingEnemy GROUNDINGENEMY;
-    //public static WindEnemy WINDENEMY;
-    //public static FrozenEnemy FROZENENEMY;
-    //public static SlowEnemy SLOWENEMY;
-
     public static EnemyCounter EnemyCounter;
     public static EnemyObjectiveSystem EnemyObjectiveSystem;
     public static Carver CARVER;
@@ -103,12 +92,12 @@ public static class GlobalVariables
     #endregion FireBoss
 
     #region MoltenBoss
+        
     public static MoltenBoss MoltenBoss;
     public static MoltenBossManager MoltenBossManager;
     public static MoltenBossAttack MoltenBossAttack;
     public static MoltenBossAttackPointL MoltenBossAttackPointL;
     public static MoltenBossAttackPointR MoltenBossAttackPointR;
-
     public enum MoltenBossManagerState { StageOne, StageTwo, StageThree, StageFour, MoltenBosUnlocking, RandomizingMushrooms, SwitchingToNewState }
     public enum MoltenBossMushroomWaveStates { MoltenMushroomOne, MoltenMushroomTwo, MoltenMushroomThree, MoltenMushroomFour, MoltenMushroomFive, MoltenMushroomSix, MoltenMushroomSeven }
     public enum MoltenBossStates { Waiting, Activating, Attacking }
@@ -121,13 +110,9 @@ public static class GlobalVariables
     public static WaterBossOne WaterBossOne;
     public static WaterBossTwo WaterBossTwo;
     public static WaterBossAttackPoint WaterBossAttackPoint;
-    //public static WaterBossAttackPoint2 WaterBossAttackPoint2;
     public static WaterBossProjectileAttack WaterBossProjectileAttack;
-    //public static WaterBossProjectileAttack2 WaterBossProjectileAttack2;
     public static TeleportToCharacter TeleportToCharacter;
-    //public static TeleportToCharacter2 TeleportToCharacter2;
     public static WhirlpoolAttack WhirlpoolAttack;
-    //public static WhirlpoolAttack2 WhirlpoolAttack2;
     public static StartWaves StartWaves;
     public static WaterBossMushroomPuzzle WaterBossMushroomPuzzle;
 
@@ -143,7 +128,6 @@ public static class GlobalVariables
     public enum CanDrawRound { RoundOne, RoundTwo, RoundThree, RoundFour, RoundFive, RoundSix, RoundSeven, RoundEight, RoundNine, RoundTen, RoundEleven, RoundTwelve, RoundThirteen }
     public enum CanDrawRoundTwo { RoundOneStageTwo, RoundTwoStageTwo, RoundThreeStageTwo }
     public enum BossState { StageOne, StageTwo, StageThree, Rolling, Activate, Run, Death, GroundingBossUnlock, CountingDown, CountingDownStageTwo, BossOneConverging, BossTwoConverging, BossThreeConverging, BossFourConverging, BossFiveConverging }
-    //public enum GroundingBossState { EnemyStateNotFunctioning, UsingNavPoints, Chase, Idle, HuddleIdle, Activating, Moving, Rolling, Attack, }
 
     #endregion GroundingBoss
 
@@ -170,7 +154,7 @@ public static class GlobalVariables
     public enum FrozenBossManagerStages { StageOne, StageTwo, StageThree }
 
     #endregion FrozenBoss
-
+        
     #region FinalBoss
 
     public static FinalBossController FinalBossController;
