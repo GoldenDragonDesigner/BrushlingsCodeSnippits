@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -10,7 +10,6 @@ public class FireBoss : BaseEnemyScript
     [Header("Fire Boss Bools")]
     public bool birthing;
     public bool summoning;
-
     [Header("Boss Animations")]
     [Tooltip("This is a bool animation and it is called at the beginning of the fight")]
     public string birth;
@@ -22,27 +21,22 @@ public class FireBoss : BaseEnemyScript
     public string spellB;
     [Tooltip("This is a trigger and is used when the player completes a stage in the fight and makes the boss mad")]
     public string roar;
-
     [Header("Boss animation delay times")]
     [Tooltip("This is the time set for delaying the animation for the boss spawning the enemies")]
     public float spawnTime;
     [Tooltip("this is the health of the boss halved")]
     public float halfLife;
     private float _results;
-
     private FireBossManager _fireBossManager;
-
     private GlobalVariables.FireBossState _fireBossStates;
     private GlobalVariables.FireBossPickingAPoint _fireBossPickingAPoint;
     [Tooltip("This is the number the boss chose to move to")]
     public int fiveNumbers;
-
     [HideInInspector]
     public bool canUseAttack = true;
     [Tooltip("This is the delay time for shooting at the player")]
     public float animTime;
     private FireBossAttack _fireBossAttack;
-
     [Header("These are the nav points the boss moves to")]
     [FormerlySerializedAs("navPoint_01")]
     public Transform navPoint01;
@@ -51,18 +45,13 @@ public class FireBoss : BaseEnemyScript
     [FormerlySerializedAs("navPoint_04")] public Transform navPoint04;
     [FormerlySerializedAs("navPoint_05")] public Transform navPoint05;
     public Transform curNavPoint;
-
-    //[Tooltip("Add the BossHealthBar_All game object here")]
     public GameObject healthBar;
     [SerializeField]
     private Image _healthBarImage;
-
     [Header("This is the amount of time the boss is at a nav point")]
     private float _fireBossTime;
     public float fireBossStartTime;
-
     private AudioSource _audioSource;
-
     public AudioClip fireBossAttack, meleeAttack;
     [FormerlySerializedAs("damaged_01")] public AudioClip damaged01;
     [FormerlySerializedAs("damaged_02")] public AudioClip damaged02;
@@ -71,14 +60,10 @@ public class FireBoss : BaseEnemyScript
     [FormerlySerializedAs("deathSound_02")] public AudioClip deathSound02;
     [FormerlySerializedAs("deathSound_03")] public AudioClip deathSound03;
     public AudioClip rawrSound, birthSound, spawningEnemies;
-
     [Tooltip("Add the fire boss fiery force field here")]
     public GameObject fireBossForceField;
-
     private Player _player;
-    //public Transform bossBeforeBirth;
-
-
+    
     #endregion FireBossVariables
 
     #region Awake, Start, and Update
@@ -119,7 +104,6 @@ public class FireBoss : BaseEnemyScript
         PickingANavPoint();
         UIManager.bossCurrentHealth = curEnemyHealth;
         _healthBarImage.fillAmount = CalculatingEnemyHealth();
-        //_healthBarImage.fillAmount = CalculatingFireBossHealth();
         distanceFromPlayer = Vector3.Distance(enemyTransform.position, PlayerPrefab.transform.position);
         FireBossReset();
     }
@@ -566,9 +550,6 @@ public class FireBoss : BaseEnemyScript
         IsEnemyHit = false;
         IsEnemyMoving = false;
         healthBar.SetActive(true);
-        //Transform bossTransform = transform;
-        //bossTransform.position = bossBeforeBirth.position;
-        //bossTransform.rotation = bossBeforeBirth.rotation;
     }
 
     #endregion FireBossReset
