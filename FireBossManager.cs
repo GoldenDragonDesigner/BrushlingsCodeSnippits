@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
@@ -11,10 +11,8 @@ public class FireBossManager : MonoBehaviour
 
         [Tooltip("Name of Wave to Spawn")]
         public string nameOfWave;
-
         [Tooltip("Put the enemy prefab that will be spawning here")]
         public GameObject fireEnemyToSpawn;
-
         [Tooltip("The number of enemies that will be spawned")]
         public int numberOfFireEnemiesThatSpawn;
 
@@ -26,13 +24,9 @@ public class FireBossManager : MonoBehaviour
     #region SpawnerVariables
 
     public WaveSpawner[] wavesOfEnemies = new WaveSpawner[7];
-
     public bool pickingAMushroom;
-
     private GlobalVariables.WaveStates _waveStates;
-
     public int _sevenMushrooms;
-
     [HideInInspector]
     public int enemiesSpawnedMushroomOne;
     [HideInInspector]
@@ -47,9 +41,7 @@ public class FireBossManager : MonoBehaviour
     public int enemiesSpawnedMushroomSix;
     [HideInInspector]
     public int enemiesSpawnedMushroomSeven;
-
     private int[] _enemiesSpawnedFromMushroomsArray;
-
     public int minNumberOfEnemiesToSpawn;
     public int maxNumberOfEnemiesToSpawn;
 
@@ -59,13 +51,10 @@ public class FireBossManager : MonoBehaviour
 
     [Tooltip("This is the reference to the fire boss and its prefab should go here")]
     public GameObject fireBoss;
-
     [Tooltip("This is the array of the fire boss mushrooms")]
     public GameObject[] fireBossMushrooms = new GameObject[7];
-
     [Tooltip("this is the array of the mushrooms that have been triggered")]
     public bool[] fireBossMushroomsTriggered = new bool[7];
-
     private FireBossMushroomBase[] _mushroomScriptArray;
     private FireBossMushroom_1 _fireBossMushroom1;
     private FireBossMushroom_2 _fireBossMushroom2;
@@ -74,30 +63,20 @@ public class FireBossManager : MonoBehaviour
     private FireBossMushroom_5 _fireBossMushroom5;
     private FireBossMushroom_6 _fireBossMushroom6;
     private FireBossMushroom_7 _fireBossMushroom7;
-
     public int fireBossMushroomCount;
-
     public bool fireEnemiesSpawned;
-
     public List<GameObject> fireEnemiesTest;
-
     private GlobalVariables.FireBossManagerState _fireBossManagerState;
-
     public bool stageOne;
     public bool stageTwo;
     public bool stageThree;
     public bool fireBossUnlocking;
-
     private FireBoss _fireBoss;
-
     public GameObject[] firesToDestroy;
-
     private UIManager _uiManager;
     private PlayerAttack _playerAttack;
     private PlayAnimFireAttackHeart _playAnimFireAttackHeart;
-
     public GameObject fireTriggerVolume;
-
     private Player _player;
     #endregion FireBossManagerVariables
 
@@ -114,11 +93,8 @@ public class FireBossManager : MonoBehaviour
     private void Start()
     {
         _fireBoss = GlobalVariables.FireBoss;
-
         _fireBossManagerState = GlobalVariables.FireBossManagerState.StageOne;
-
         fireEnemiesSpawned = false;
-
         stageOne = true;
         stageTwo = false;
         stageThree = false;
